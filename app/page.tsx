@@ -18,11 +18,11 @@ import FloatingIcons from "@/components/FloatingIcons";
 
 
 const roles = [
+  "Software Engineer",
   "Full Stack Developer",
-  "Java Specialist",
-  "Spring Boot Expert",
+  "Backend Developer",
+  "Frontend Developer",
   "React Developer",
-  "Cloud Architecture",
 ];
 
 export default function HomePage() {

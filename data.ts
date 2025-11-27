@@ -6,7 +6,7 @@ export const personalInfo = {
   tagline: "Building scalable, innovative, and high-performance software solutions.",
   email: "contactjpmails@gmail.com",
   phone: "+94 71 3031383",
-  location: "Salpilwaththa, Katupotha, Sri Lanka",
+  location: "Salpilwaththa, Katupotha, Sri Lanka, 60350",
   linkedin: "https://linkedin.com/in/janaka-prasad",
   github: "https://github.com/janakaprasadq",
   about: "Results-driven Software Engineer with strong experience in Java, Python, and JavaScript. Proficient in designing and implementing RESTful APIs, scalable backend systems, and data-driven applications using MySQL and MongoDB. Holds a BSc in Electronics and Information Technology with proven skills in Git, Jira, and Agile collaboration."
@@ -23,15 +23,15 @@ export const skills: SkillCategory[] = [
   },
   {
     name: "Backend",
-    skills: ["Node.js", "Express.js", "NestJS", "Spring Boot", "Java EE", "FastAPI"]
+    skills: ["Node.js", "Express.js", "Java EE", "NestJS", "Spring Boot", "FastAPI"]
   },
   {
     name: "Database & Cloud",
-    skills: ["MySQL", "MongoDB", "PostgreSQL", "Firebase", "AWS"]
+    skills: ["MySQL", "MongoDB", "PostgreSQL", "Firebase"]
   },
   {
     name: "Tools & DevOps",
-    skills: ["Git", "Jira", "Confluence", "Gerrit", "Adobe Creative Suite"]
+    skills: ["AWS", "Git", "Jira", "Confluence", "Gerrit", "Docker", "Adobe Creative Suite"]
   }
 ];
 
@@ -52,7 +52,7 @@ export const experiences: Experience[] = [
     id: "raahi",
     role: "Web Developer",
     company: "Raahi (Startup Project)",
-    period: "Jan 2025 - Jul 2025",
+    period: "Aug 2025 - Present",
     description: [
       "Contributing to the backend development of the company’s core web application using NestJS and TypeScript.",
       "Designing and implementing RESTful APIs and modular microservice components for scalable architecture.",
@@ -69,10 +69,16 @@ export const education: Education[] = [
     details: "Second Class Honours"
   },
   {
-    degree: "G.C.E. Advanced Level Examination (Physical Science Stream)",
+    degree: "G.C.E. Advanced Level Examination (Physical Science Stream) ( 2019 )",
     institution: "Maliyadewa Adarsha M.V — Kurunegala, Sri Lanka",
     period: "Jan 2009 - Aug 2017",
     details: "Chemistry (B), Combined Maths (C), Physics (C)"
+  },
+  {
+    degree: "G.C.E. Ordinary Level Examination ( 2014 )",
+    institution: "Maliyadewa Adarsha M.V — Kurunegala, Sri Lanka",
+    period: "Jan 2009 - Aug 2017",
+    details: "Mathematics (A), Science (A), Sinhala (A), History (A), ICT (A), Buddhism (A), Geography (A), Art (A), English (B)"
   }
 ];
 
