@@ -1,5 +1,6 @@
 "use client";
 
+import { use } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -10,9 +11,10 @@ import { projects } from "@/data";
 export default function ProjectDetailsPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>
 }) {
-  const project = projects.find((p) => p.id === params.id);
+  const { id } = use(params);
+  const project = projects.find((p) => String(p.id) === id);
 
   if (!project) {
     return (
@@ -75,7 +77,7 @@ export default function ProjectDetailsPage({
 
             {/* Overview + Features */}
             <div className="md:col-span-2 space-y-8">
-              
+
               {/* Overview */}
               <div>
                 <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
@@ -110,7 +112,7 @@ export default function ProjectDetailsPage({
 
             {/* Sidebar */}
             <div className="space-y-6">
-              
+
               {/* Links Card */}
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-lg font-bold text-white mb-4">
