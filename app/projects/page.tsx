@@ -21,7 +21,7 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-screen pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <SectionTitle
           title="My Projects"
           subtitle="A selection of my recent work and experiments"
@@ -33,11 +33,10 @@ export default function ProjectsPage() {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                filter === cat
-                  ? "bg-primary text-white shadow-lg shadow-primary/25 ring-2 ring-secondary/50"
-                  : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white"
-              }`}
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${filter === cat
+                ? "bg-primary text-white shadow-lg shadow-primary/25 ring-2 ring-secondary/50"
+                : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white"
+                }`}
             >
               {cat}
             </button>
@@ -66,9 +65,9 @@ export default function ProjectsPage() {
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
 
-                <div className="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 
+                <div className="absolute inset-0 md:bg-dark/60 opacity-100 md:opacity-0 md:group-hover:opacity-100 
                                 transition-opacity duration-300 flex items-center justify-center 
-                                space-x-4 backdrop-blur-sm">
+                                space-x-4 md:backdrop-blur-sm">
                   {/* Project Details Button */}
                   <Link
                     href={`/projects/${project.id}`}
