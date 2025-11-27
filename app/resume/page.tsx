@@ -40,14 +40,20 @@ export default function ResumePageRoot() {
   return (
     <div className="min-h-screen pt-24 pb-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Top title + button */}
         <div className="flex justify-between items-center mb-8">
           <SectionTitle title="Resume" />
-          <button className="flex items-center px-5 py-2 bg-primary hover:bg-primary/80 
-              text-white rounded-full transition-colors shadow-lg shadow-primary/20 border border-primary/50">
-            <Download size={18} className="mr-2" /> Download PDF
-          </button>
+          <a
+            href="/cv/janaka-prasad-cv.pdf"
+            download
+            className="flex items-center px-5 py-2 bg-primary hover:bg-primary/80 
+    text-white rounded-full transition-colors shadow-lg shadow-primary/20 border border-primary/50"
+          >
+            <Download size={18} className="mr-2" />
+            Download PDF
+          </a>
+
         </div>
 
         <div className="space-y-8">

@@ -144,12 +144,18 @@ export default function HomePage() {
               </span>
             </Link>
 
-            <Link
-              href="/resume"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-bold text-lg hover:bg-white/10 hover:border-accent/50 hover:text-accent transition-all transform hover:-translate-y-1 backdrop-blur-sm"
+            <a
+              href="/cv/janaka-prasad-cv.pdf"
+              download
+              className="inline-flex items-center justify-center px-8 py-4 rounded-full 
+    bg-white/5 border border-white/10 text-white font-bold text-lg
+    hover:bg-white/10 hover:border-accent/50 hover:text-accent 
+    transition-all transform hover:-translate-y-1 backdrop-blur-sm"
             >
-              Download CV <Download className="ml-2" size={20} />
-            </Link>
+              Download CV
+              <Download className="ml-2" size={20} />
+            </a>
+
           </motion.div>
 
           {/* SOCIAL ICONS */}
