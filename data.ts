@@ -1,0 +1,140 @@
+import { Project, Experience, Education, SkillCategory } from './types';
+
+export const personalInfo = {
+  name: "Janaka Prasad",
+  role: "Software Engineer (Full Stack)",
+  tagline: "Building scalable, innovative, and high-performance software solutions.",
+  email: "contactjpmails@gmail.com",
+  phone: "+94 71 3031383",
+  location: "Salpilwaththa, Katupotha, Sri Lanka",
+  linkedin: "https://linkedin.com/in/janaka-prasad",
+  github: "https://github.com/janakaprasadq",
+  about: "Results-driven Software Engineer with strong experience in Java, Python, and JavaScript. Proficient in designing and implementing RESTful APIs, scalable backend systems, and data-driven applications using MySQL and MongoDB. Holds a BSc in Electronics and Information Technology with proven skills in Git, Jira, and Agile collaboration."
+};
+
+export const skills: SkillCategory[] = [
+  {
+    name: "Languages",
+    skills: ["Java", "JavaScript", "TypeScript", "Python", "C/C++", "SQL"]
+  },
+  {
+    name: "Frontend",
+    skills: ["React", "Angular", "Next.js", "Tailwind CSS", "Bootstrap", "HTML5", "CSS3"]
+  },
+  {
+    name: "Backend",
+    skills: ["Node.js", "Express.js", "NestJS", "Spring Boot", "Java EE", "FastAPI"]
+  },
+  {
+    name: "Database & Cloud",
+    skills: ["MySQL", "MongoDB", "PostgreSQL", "Firebase", "AWS"]
+  },
+  {
+    name: "Tools & DevOps",
+    skills: ["Git", "Jira", "Confluence", "Gerrit", "Adobe Creative Suite"]
+  }
+];
+
+export const experiences: Experience[] = [
+  {
+    id: "zebra",
+    role: "Software Engineer Intern",
+    company: "Zebra Technologies",
+    period: "Jan 2025 - Jul 2025",
+    description: [
+      "Contributed to Android Open Source Project (AOSP) framework-level customization and development using Java.",
+      "Actively participated in Agile/Scrum ceremonies, including daily stand-ups, sprint planning, and retrospectives.",
+      "Collaborated with cross-functional engineering teams to analyze requirements, debug system issues, and implement robust software enhancements.",
+      "Utilized Jira for task management, Confluence for documentation, and Git/Gerrit for version control."
+    ]
+  },
+  {
+    id: "raahi",
+    role: "Web Developer",
+    company: "Raahi (Startup Project)",
+    period: "Jan 2025 - Jul 2025",
+    description: [
+      "Contributing to the backend development of the company’s core web application using NestJS and TypeScript.",
+      "Designing and implementing RESTful APIs and modular microservice components for scalable architecture.",
+      "Collaborating with the frontend team to ensure seamless API integration and optimal performance."
+    ]
+  }
+];
+
+export const education: Education[] = [
+  {
+    degree: "BSc (Honours) in Electronics and Information Technology",
+    institution: "University of Colombo — Sri Lanka",
+    period: "Apr 2021 - Apr 2025",
+    details: "Second Class Honours"
+  },
+  {
+    degree: "G.C.E. Advanced Level Examination (Physical Science Stream)",
+    institution: "Maliyadewa Adarsha M.V — Kurunegala, Sri Lanka",
+    period: "Jan 2009 - Aug 2017",
+    details: "Chemistry (B), Combined Maths (C), Physics (C)"
+  }
+];
+
+export const projects: Project[] = [
+  {
+    id: "ecommerce-mern",
+    title: "E-Commerce Website",
+    category: "Full Stack",
+    description: "A full-stack MERN e-commerce platform with authentication and payments.",
+    longDescription: "Built a robust full-stack MERN e-commerce platform featuring user authentication, a comprehensive admin dashboard, Stripe-based payment processing, and real-time order tracking.",
+    techStack: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Cloudinary", "Stripe"],
+    imageUrl: "https://picsum.photos/seed/ecommerce/800/600",
+    features: ["User Authentication", "Admin Dashboard", "Stripe Payment Gateway", "Order Tracking", "Cloudinary Image Hosting"]
+  },
+  {
+    id: "pos-system",
+    title: "Point of Sale (POS) System",
+    category: "Full Stack",
+    description: "Ongoing client project featuring inventory and order management.",
+    longDescription: "Developing a comprehensive POS system designed for retail efficiency. Features include inventory tracking, order processing, and customer management modules.",
+    techStack: ["Spring Boot", "React.js", "MySQL"],
+    imageUrl: "https://picsum.photos/seed/pos/800/600",
+    features: ["Inventory Management", "Order Processing", "Customer CRM", "Reporting"]
+  },
+  {
+    id: "movie-console",
+    title: "Movie Rating & Purchase App",
+    category: "Backend",
+    description: "Java console application for movie reviews with CRUD operations.",
+    longDescription: "A Java console-based application designed for an academic project. It facilitates purchasing and reviewing movies using Hibernate ORM for data persistence and includes algorithms for average rating calculations.",
+    techStack: ["Java", "Hibernate ORM"],
+    imageUrl: "https://picsum.photos/seed/movie/800/600",
+    features: ["CRUD Operations", "Rating Calculation", "Console Interface", "Data Persistence"]
+  },
+  {
+    id: "photo-landing",
+    title: "Photography Landing Page",
+    category: "Frontend",
+    description: "Responsive landing website with email integration.",
+    longDescription: "Designed a highly responsive landing website for a photography portfolio. Includes a contact form with email integration via Nodemailer and WhatsApp chat support.",
+    techStack: ["React.js", "Node.js", "Bootstrap", "Nodemailer"],
+    imageUrl: "https://picsum.photos/seed/photo/800/600",
+    features: ["Responsive Design", "Email Integration", "WhatsApp Support"]
+  },
+  {
+    id: "parcel-api",
+    title: "Parcel Management API",
+    category: "Backend",
+    description: "FastAPI backend for tracking numbers and chatbot integration.",
+    longDescription: "Developed a high-performance Python FastAPI backend to extract tracking numbers and fetch parcel location data, specifically designed to integrate with a chatbot service.",
+    techStack: ["Python", "FastAPI"],
+    imageUrl: "https://picsum.photos/seed/parcel/800/600",
+    features: ["Tracking extraction", "Chatbot Integration", "FastAPI Performance"]
+  },
+  {
+    id: "tourism-web",
+    title: "Tourism Website",
+    category: "Frontend",
+    description: "React-based tourism platform with SEO optimization.",
+    longDescription: "Developed a React-based tourism platform featuring destination articles and responsive UI to enhance user engagement. Focused on content presentation, SEO optimization, and smooth navigation.",
+    techStack: ["React.js", "HTML", "CSS", "JavaScript"],
+    imageUrl: "https://picsum.photos/seed/tourism/800/600",
+    features: ["SEO Optimization", "Content Management", "Responsive UI"]
+  }
+];
