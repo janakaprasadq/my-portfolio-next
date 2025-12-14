@@ -121,7 +121,9 @@ export default function ProjectDetailsPage({
 
                 <div className="space-y-3">
                   <a
-                    href="#"
+                    href={project.liveDemoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center justify-center w-full py-3 bg-gradient-to-r 
                               from-primary to-secondary hover:opacity-90 text-white rounded-lg 
                               transition-all font-medium shadow-lg shadow-primary/20"

@@ -90,8 +90,9 @@ export const projects: Project[] = [
     description: "A full-stack MERN e-commerce platform with authentication and payments.",
     longDescription: "Built a robust full-stack MERN e-commerce platform featuring user authentication, a comprehensive admin dashboard, Stripe-based payment processing, and real-time order tracking.",
     techStack: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Cloudinary", "Stripe"],
-    imageUrl: "https://picsum.photos/seed/ecommerce/800/600",
-    features: ["User Authentication", "Admin Dashboard", "Stripe Payment Gateway", "Order Tracking", "Cloudinary Image Hosting"]
+    imageUrl: "/images/ecommerce.png",
+    features: ["User Authentication", "Admin Dashboard", "Stripe Payment Gateway", "Order Tracking", "Cloudinary Image Hosting"],
+    liveDemoUrl: "https://vibewear.lk/"
   },
   {
     id: "pos-system",
@@ -130,7 +131,7 @@ export const projects: Project[] = [
     description: "FastAPI backend for tracking numbers and chatbot integration.",
     longDescription: "Developed a high-performance Python FastAPI backend to extract tracking numbers and fetch parcel location data, specifically designed to integrate with a chatbot service.",
     techStack: ["Python", "FastAPI"],
-    imageUrl: "https://picsum.photos/seed/parcel/800/600",
+    imageUrl: "/images/parcel.png",
     features: ["Tracking extraction", "Chatbot Integration", "FastAPI Performance"]
   },
   {
@@ -140,7 +141,19 @@ export const projects: Project[] = [
     description: "React-based tourism platform with SEO optimization.",
     longDescription: "Developed a React-based tourism platform featuring destination articles and responsive UI to enhance user engagement. Focused on content presentation, SEO optimization, and smooth navigation.",
     techStack: ["React.js", "HTML", "CSS", "JavaScript"],
-    imageUrl: "https://picsum.photos/seed/tourism/800/600",
-    features: ["SEO Optimization", "Content Management", "Responsive UI"]
+    imageUrl: "/images/tourism.png",
+    features: ["SEO Optimization", "Content Management", "Responsive UI"],
+    liveDemoUrl: "https://visit-srilanka-eight.vercel.app/"
+  },
+  {
+    id: "software-company",
+    title: "Voxicore Software Company Website",
+    category: "Full Stack",
+    description: "Next.js based software company website",
+    longDescription: "Designed and developed a modern, high-performance corporate website for Voxicore using Next.js. The platform features a responsive design, SEO-optimized pages, and a seamless user experience to effectively showcase the company's software solutions and services.",
+    techStack: ["Next.js", "HTML", "CSS", "JavaScript"],
+    imageUrl: "/images/voxicore.png",
+    features: ["SEO Optimization", "Content Management", "Responsive UI"],
+    liveDemoUrl: "https://www.voxicore.com/"
   }
 ];

@@ -9,6 +9,7 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   features: string[];
+  liveDemoUrl?: string;
 }
 
 export interface Experience {
