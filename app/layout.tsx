@@ -3,6 +3,10 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import ClickSparkle from "@/components/ClickSparkle";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
+
 
 export const metadata: Metadata = {
   title: "Janaka Prasad | Full Stack Software Engineer",
@@ -18,14 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        {/* Inter Font */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
+
       </head>
 
-      <body className="bg-dark text-white font-sans antialiased overflow-x-hidden">
+      <body className={`${inter.className} bg-dark text-white antialiased overflow-x-hidden`}>
         {/* 🔥 Global Click Effects (optional component) */}
         <ClickSparkle />
 

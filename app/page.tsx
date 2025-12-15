@@ -8,10 +8,6 @@ import {
   Download,
   Github,
   Linkedin,
-  Code,
-  Database,
-  Server,
-  Cpu,
 } from "lucide-react";
 import { personalInfo } from "@/data";
 import FloatingIcons from "@/components/FloatingIcons";
@@ -50,9 +46,6 @@ export default function HomePage() {
 
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, roleIndex]);
-
-  // Safe random for SSR
-  const random = (max: number) => Math.floor(Math.random() * max);
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-dark">
@@ -93,7 +86,7 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6"
           >
-            Hi, I'm <br className="md:hidden" />
+            Hi, I&aposm <br className="md:hidden" />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent via-secondary to-primary drop-shadow-[0_0_15px_rgba(247,37,133,0.5)]">
               Janaka Prasad
             </span>

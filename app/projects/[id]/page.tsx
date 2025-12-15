@@ -151,7 +151,7 @@ export default function ProjectDetailsPage({
                 </h4>
 
                 <p className="text-gray-400 text-sm mb-4">
-                  I can build similar applications for your needs. Let's discuss.
+                  I can build similar applications for your needs. Let&aposs discuss.
                 </p>
 
                 <Link

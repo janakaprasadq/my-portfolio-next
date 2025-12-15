@@ -8,15 +8,33 @@ import { skills, experiences, personalInfo, education } from "@/data";
 import { Calendar, MapPin, Briefcase, GraduationCap } from "lucide-react";
 
 // ---------------- Roadmap Item ----------------
+type ExperienceItem = {
+  kind: "experience";
+  role: string;
+  company: string;
+  period: string;
+  description: string[];
+};
+
+type EducationItem = {
+  kind: "education";
+  degree: string;
+  institution: string;
+  period: string;
+  details?: string; // optional (matches your data)
+};
+
+type RoadmapItemType = ExperienceItem | EducationItem;
+
 
 interface RoadmapItemProps {
-  item: any;
+  item: RoadmapItemType;
   index: number;
   type: "experience" | "education";
   total: number;
 }
 
-const RoadmapItem = ({ item, index, type, total }: RoadmapItemProps) => {
+const RoadmapItem = ({ item, index, total }: RoadmapItemProps) => {
   const isEven = index % 2 === 0;
   const isLast = index === total - 1;
 
@@ -31,9 +49,8 @@ const RoadmapItem = ({ item, index, type, total }: RoadmapItemProps) => {
       {/* Mobile timeline line */}
       <div className="md:hidden flex flex-col items-center mr-6 shrink-0 relative">
         <div
-          className={`w-[2px] bg-gradient-to-b from-primary/50 to-secondary/50 absolute top-0 ${
-            isLast ? "h-8" : "bottom-[-32px]"
-          } left-1/2 -translate-x-1/2`}
+          className={`w-[2px] bg-gradient-to-b from-primary/50 to-secondary/50 absolute top-0 ${isLast ? "h-8" : "bottom-[-32px]"
+            } left-1/2 -translate-x-1/2`}
         />
         <div className="relative z-10 mt-6 w-8 h-8 rounded-full bg-dark border-2 border-accent shadow-[0_0_15px_#4CC9F0] flex items-center justify-center">
           <div className="w-2.5 h-2.5 bg-white rounded-full animate-pulse shadow-[0_0_8px_white]" />
@@ -56,21 +73,18 @@ const RoadmapItem = ({ item, index, type, total }: RoadmapItemProps) => {
         className="w-full md:w-5/12 relative z-10"
       >
         <div
-          className={`hidden md:block absolute top-1/2 -translate-y-1/2 h-0.5 bg-gradient-to-r from-accent/50 to-transparent w-12 ${
-            isEven ? "left-auto -right-12 rotate-180" : "right-auto -left-12"
-          }`}
+          className={`hidden md:block absolute top-1/2 -translate-y-1/2 h-0.5 bg-gradient-to-r from-accent/50 to-transparent w-12 ${isEven ? "left-auto -right-12 rotate-180" : "right-auto -left-12"
+            }`}
         />
 
         <div
-          className={`relative p-1 rounded-xl bg-gradient-to-br from-white/10 to-transparent hover:from-accent/30 hover:to-primary/30 transition-all duration-300 group ${
-            isEven ? "md:text-right" : "md:text-left"
-          }`}
+          className={`relative p-1 rounded-xl bg-gradient-to-br from-white/10 to-transparent hover:from-accent/30 hover:to-primary/30 transition-all duration-300 group ${isEven ? "md:text-right" : "md:text-left"
+            }`}
         >
           <div className="bg-dark/90 backdrop-blur-xl p-6 rounded-[10px] h-full border border-white/5 group-hover:border-accent/30 transition-colors shadow-lg">
             <div
-              className={`flex flex-col mb-4 ${
-                isEven ? "md:items-end" : "md:items-start"
-              }`}
+              className={`flex flex-col mb-4 ${isEven ? "md:items-end" : "md:items-start"
+                }`}
             >
               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-primary/20 text-accent border border-primary/30 mb-2">
                 <Calendar size={12} className="mr-2" />
@@ -78,31 +92,30 @@ const RoadmapItem = ({ item, index, type, total }: RoadmapItemProps) => {
               </span>
 
               <h3 className="text-xl font-bold text-white group-hover:text-secondary transition-colors">
-                {type === "experience" ? item.role : item.degree}
+                {item.kind === "experience" ? item.role : item.degree}
               </h3>
 
               <p className="text-lg text-gray-300 font-medium mt-1">
-                {type === "experience" ? item.company : item.institution}
+                {item.kind === "experience"
+                  ? item.company
+                  : item.institution}
               </p>
             </div>
 
-            {type === "experience" ? (
+            {item.kind === "experience" ? (
               <ul
-                className={`list-none text-gray-400 text-sm space-y-3 ${
-                  isEven ? "md:flex md:flex-col md:items-end" : ""
-                }`}
+                className={`list-none text-gray-400 text-sm space-y-3 ${isEven ? "md:flex md:flex-col md:items-end" : ""
+                  }`}
               >
                 {item.description.map((desc: string, i: number) => (
                   <li
                     key={i}
-                    className={`relative pl-5 ${
-                      isEven ? "md:pl-0 md:pr-5" : ""
-                    }`}
+                    className={`relative pl-5 ${isEven ? "md:pl-0 md:pr-5" : ""
+                      }`}
                   >
                     <span
-                      className={`absolute top-2 left-0 w-1.5 h-1.5 bg-secondary rounded-full shadow-[0_0_5px_#F72585] ${
-                        isEven ? "md:left-auto md:right-0" : ""
-                      }`}
+                      className={`absolute top-2 left-0 w-1.5 h-1.5 bg-secondary rounded-full shadow-[0_0_5px_#F72585] ${isEven ? "md:left-auto md:right-0" : ""
+                        }`}
                     />
                     {desc}
                   </li>
@@ -126,7 +139,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen pt-24 pb-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <SectionTitle
           title="About Me"
           subtitle="My journey, education, and technical expertise"
@@ -134,7 +147,7 @@ export default function AboutPage() {
 
         {/* Profile + Skills */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24">
-          
+
           {/* Left: Profile */}
           <div className="lg:col-span-4">
             <motion.div
@@ -244,7 +257,7 @@ export default function AboutPage() {
               {experiences.map((exp, idx) => (
                 <RoadmapItem
                   key={idx}
-                  item={exp}
+                  item={{ ...exp, kind: "experience" }}
                   index={idx}
                   type="experience"
                   total={experiences.length}
@@ -272,7 +285,7 @@ export default function AboutPage() {
               {education.map((edu, idx) => (
                 <RoadmapItem
                   key={idx}
-                  item={edu}
+                  item={{ ...edu, kind: "education" }}
                   index={idx}
                   type="education"
                   total={education.length}

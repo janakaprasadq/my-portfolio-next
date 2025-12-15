@@ -2,23 +2,33 @@
 
 import { motion } from "framer-motion";
 import { Code, Database, Server, Cpu } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+
+type FloatingIcon = {
+  x: number;
+  y: number;
+  rotate: number;
+  scale: number;
+  icon: "code" | "db" | "server" | "cpu";
+  size: number;
+};
 
 export default function FloatingIcons() {
-  const [icons, setIcons] = useState<any[]>([]);
+  const [icons] = useState<FloatingIcon[]>(() => {
+    // Runs ONCE on client
+    if (typeof window === "undefined") return [];
 
-  useEffect(() => {
-    const arr = Array.from({ length: 8 }).map(() => ({
+    return Array.from({ length: 8 }).map(() => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
       rotate: Math.random() * 360,
       scale: 0.5 + Math.random() * 0.5,
-      icon: ["code", "db", "server", "cpu"][Math.floor(Math.random() * 4)],
+      icon: ["code", "db", "server", "cpu"][
+        Math.floor(Math.random() * 4)
+      ] as FloatingIcon["icon"],
       size: 40 + Math.random() * 40,
     }));
-
-    setIcons(arr);
-  }, []);
+  });
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">

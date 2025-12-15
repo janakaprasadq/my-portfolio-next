@@ -76,7 +76,7 @@ export default function ClickSparkle() {
       const particles = particlesRef.current;
 
       // Update particles
-      for (let p of particles) {
+      for (const p of particles) {
         p.x += p.vx;
         p.y += p.vy;
         p.life -= p.decay;
