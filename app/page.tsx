@@ -86,7 +86,7 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6"
           >
-            Hi, I&aposm <br className="md:hidden" />
+            Hi, I&aposm; <br className="md:hidden" />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent via-secondary to-primary drop-shadow-[0_0_15px_rgba(247,37,133,0.5)]">
               Janaka Prasad
             </span>
