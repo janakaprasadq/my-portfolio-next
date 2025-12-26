@@ -155,5 +155,38 @@ export const projects: Project[] = [
     imageUrl: "/images/voxicore.png",
     features: ["SEO Optimization", "Content Management", "Responsive UI"],
     liveDemoUrl: "https://www.voxicore.com/"
-  }
+  },
+  {
+    id: "photo-landing-2",
+    title: "Photography Landing Page",
+    category: "Frontend",
+    description: "This is a landing page for a photography portfolio",
+    longDescription: "Developed a visually engaging, fully responsive photography portfolio landing site optimized for performance and user experience.",
+    techStack: ["React.js", "Node.js", "Bootstrap", "Nodemailer"],
+    imageUrl: "/images/luminaluxe.png",
+    features: ["Responsive Design"],
+    liveDemoUrl: "https://lumina-luxe.netlify.app/"
+  },
+
+  {
+    id: "coffee-landing",
+    title: "Lumina-luxe Coffee Landing Page",
+    category: "Frontend",
+    description: "This is a landing page for a coffee shop",
+    longDescription: "A clean, responsive landing page for a coffee shop that highlights its offerings with inviting visuals and easy navigation, designed to engage visitors and showcase the brand’s warm, cozy vibe.",
+    techStack: ["React.js", "Node.js", "Bootstrap", "Nodemailer"],
+    imageUrl: "/images/lumina.png",
+    features: ["Responsive Design"],
+    liveDemoUrl: "https://lumina-luxe.netlify.app/"
+  }, {
+    id: "hotel-landing",
+    title: "LuxeStay Hotel Landing Page",
+    category: "Frontend",
+    description: "Luxury hotel landing page design.",
+    longDescription: "Created elegant luxury hotel landing page showcasing amenities, bookings, immersive visuals, enhancing guest engagement online.",
+    techStack: ["React.js", "Node.js", "Bootstrap", "Nodemailer"],
+    imageUrl: "/images/luxstay.png",
+    features: ["Responsive Design"],
+    liveDemoUrl: "https://luxstayluxuryhotel.netlify.app/"
+  },
 ];

@@ -62,7 +62,7 @@ export default function ProjectsPage() {
                   src={project.imageUrl}
                   alt={project.title}
                   fill
-                  className="object-contain transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
 
                 <div className="absolute inset-0 md:bg-dark/60 opacity-100 md:opacity-0 md:group-hover:opacity-100 
