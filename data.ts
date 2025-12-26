@@ -101,7 +101,7 @@ export const projects: Project[] = [
     description: "Ongoing client project featuring inventory and order management.",
     longDescription: "Developing a comprehensive POS system designed for retail efficiency. Features include inventory tracking, order processing, and customer management modules.",
     techStack: ["Spring Boot", "React.js", "MySQL"],
-    imageUrl: "https://picsum.photos/seed/pos/800/600",
+    imageUrl: "/images/pos.png",
     features: ["Inventory Management", "Order Processing", "Customer CRM", "Reporting"]
   },
   {
@@ -111,7 +111,7 @@ export const projects: Project[] = [
     description: "Java console application for movie reviews with CRUD operations.",
     longDescription: "A Java console-based application designed for an academic project. It facilitates purchasing and reviewing movies using Hibernate ORM for data persistence and includes algorithms for average rating calculations.",
     techStack: ["Java", "Hibernate ORM"],
-    imageUrl: "https://picsum.photos/seed/movie/800/600",
+    imageUrl: "/images/movie.png",
     features: ["CRUD Operations", "Rating Calculation", "Console Interface", "Data Persistence"]
   },
   {
@@ -121,7 +121,7 @@ export const projects: Project[] = [
     description: "Responsive landing website with email integration.",
     longDescription: "Designed a highly responsive landing website for a photography portfolio. Includes a contact form with email integration via Nodemailer and WhatsApp chat support.",
     techStack: ["React.js", "Node.js", "Bootstrap", "Nodemailer"],
-    imageUrl: "https://picsum.photos/seed/photo/800/600",
+    imageUrl: "/images/graphershot.png",
     features: ["Responsive Design", "Email Integration", "WhatsApp Support"]
   },
   {
