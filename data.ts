@@ -102,7 +102,13 @@ export const projects: Project[] = [
     longDescription: "Developing a comprehensive POS system designed for retail efficiency. Features include inventory tracking, order processing, and customer management modules.",
     techStack: ["Spring Boot", "React.js", "MySQL"],
     imageUrl: "/images/pos.png",
-    features: ["Inventory Management", "Order Processing", "Customer CRM", "Reporting"]
+    features: ["Inventory Management", "Order Processing", "Customer CRM", "Reporting"],
+    gallery: [
+      "/images/pos1.png",
+      "/images/pos2.png", // Using other images as placeholders for now
+      "/images/pos3.png",
+      "/images/pos4.png"
+    ]
   },
   {
     id: "movie-console",
@@ -188,5 +194,37 @@ export const projects: Project[] = [
     imageUrl: "/images/luxstay.png",
     features: ["Responsive Design"],
     liveDemoUrl: "https://luxstayluxuryhotel.netlify.app/"
+  },
+  {
+    id: "payroll-system",
+    title: "Payroll Management System",
+    category: "Full Stack",
+    description: "A desktop application for managing employee salaries and attendance.",
+    longDescription: "Designed and developed a robust desktop-based Payroll Management System using Java and JavaFX. The application streamlines employee management, automates salary calculations based on attendance and allowances, and generates detailed payslips. It utilizes SQLite for efficient, lightweight local data storage.",
+    techStack: ["Java", "JavaFx", "SQLite"],
+    imageUrl: "/images/payroll1.png",
+    features: ["Employee Management", "Salary Automation", "Payslip Generation"],
+    gallery: [
+      "/images/payroll1.png",
+      "/images/payroll2.png",
+      "/images/payroll3.png",
+      "/images/payroll4.png"
+    ]
+  },
+  {
+    id: "invoice-generator",
+    title: "Invoice Generator",
+    category: "Full Stack",
+    description: "A desktop application for generating invoices.",
+    longDescription: "Designed and developed a robust desktop-based Invoice Generator using Java and JavaFX. The application streamlines employee management, automates salary calculations based on attendance and allowances, and generates detailed payslips. It utilizes SQLite for efficient, lightweight local data storage.",
+    techStack: ["Java", "JavaFx", "SQLite"],
+    imageUrl: "/images/invoice1.png",
+    features: ["Client Management", "Invoice History", "Invoice Generation"],
+    gallery: [
+      "/images/invoice1.png",
+      "/images/invoice2.png",
+      "/images/invoice3.png",
+      "/images/invoice4.png"
+    ]
   },
 ];

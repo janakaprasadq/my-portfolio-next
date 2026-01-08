@@ -10,6 +10,7 @@ export interface Project {
   liveUrl?: string;
   features: string[];
   liveDemoUrl?: string;
+  gallery?: string[];
 }
 
 export interface Experience {

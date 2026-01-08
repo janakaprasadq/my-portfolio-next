@@ -58,34 +58,15 @@ export default function ProjectsPage() {
             >
               {/* Image */}
               <div className="aspect-video overflow-hidden relative">
-                <Image
-                  src={project.imageUrl}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-
-                <div className="absolute inset-0 md:bg-dark/60 opacity-100 md:opacity-0 md:group-hover:opacity-100 
-                                transition-opacity duration-300 flex items-center justify-center 
-                                space-x-4 md:backdrop-blur-sm">
-                  {/* Project Details Button */}
-                  <Link
-                    href={`/projects/${project.id}`}
-                    className="p-2 bg-white/10 rounded-full text-white 
-                               hover:bg-primary hover:scale-110 transition-all"
-                  >
-                    <ExternalLink size={24} />
-                  </Link>
-
-                  {/* GitHub Button (dummy) */}
-                  <a
-                    href="#"
-                    className="p-2 bg-white/10 rounded-full text-white 
-                               hover:bg-secondary hover:scale-110 transition-all"
-                  >
-                    <Github size={24} />
-                  </a>
-                </div>
+                <Link href={`/projects/${project.id}`} className="block w-full h-full">
+                  <Image
+                    src={project.imageUrl}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 transition-colors duration-300 group-hover:bg-black/20" />
+                </Link>
               </div>
 
               {/* Content */}

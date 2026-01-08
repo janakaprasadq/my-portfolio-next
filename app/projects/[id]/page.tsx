@@ -1,12 +1,13 @@
 "use client";
 
-import { use } from "react";
+import { useState, use } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowLeft, Github, ExternalLink, Layers, CheckCircle } from "lucide-react";
+import { ArrowLeft, Github, ExternalLink, Layers, CheckCircle, Image as ImageIcon } from "lucide-react";
 
 import { projects } from "@/data";
+import ImageViewer from "@/components/ImageViewer";
 
 export default function ProjectDetailsPage({
   params,
@@ -15,6 +16,7 @@ export default function ProjectDetailsPage({
 }) {
   const { id } = use(params);
   const project = projects.find((p) => String(p.id) === id);
+  const [isImageViewerOpen, setIsImageViewerOpen] = useState(false);
 
   if (!project) {
     return (
@@ -120,27 +122,43 @@ export default function ProjectDetailsPage({
                 </h3>
 
                 <div className="space-y-3">
-                  <a
-                    href={project.liveDemoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-full py-3 bg-gradient-to-r 
-                              from-primary to-secondary hover:opacity-90 text-white rounded-lg 
-                              transition-all font-medium shadow-lg shadow-primary/20"
-                  >
-                    <ExternalLink size={18} className="mr-2" />
-                    Live Demo
-                  </a>
+                  {project.liveDemoUrl ? (
+                    <a
+                      href={project.liveDemoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-full py-3 bg-gradient-to-r 
+                                from-primary to-secondary hover:opacity-90 text-white rounded-lg 
+                                transition-all font-medium shadow-lg shadow-primary/20"
+                    >
+                      <ExternalLink size={18} className="mr-2" />
+                      Live Demo
+                    </a>
+                  ) : (
+                    <button
+                      onClick={() => setIsImageViewerOpen(true)}
+                      className="flex items-center justify-center w-full py-3 bg-gradient-to-r 
+                                from-primary to-secondary hover:opacity-90 text-white rounded-lg 
+                                transition-all font-medium shadow-lg shadow-primary/20"
+                    >
+                      <ImageIcon size={18} className="mr-2" />
+                      View Images
+                    </button>
+                  )}
 
-                  <a
-                    href="#"
-                    className="flex items-center justify-center w-full py-3 bg-white/10 
-                              hover:bg-white/20 text-white rounded-lg transition-all 
-                              font-medium border border-white/10"
-                  >
-                    <Github size={18} className="mr-2" />
-                    View Source
-                  </a>
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-full py-3 bg-white/10 
+                                hover:bg-white/20 text-white rounded-lg transition-all 
+                                font-medium border border-white/10"
+                    >
+                      <Github size={18} className="mr-2" />
+                      View Source
+                    </a>
+                  )}
                 </div>
               </div>
 
@@ -168,6 +186,14 @@ export default function ProjectDetailsPage({
         </motion.div>
 
       </div>
+
+      {/* Lightbox */}
+      <ImageViewer
+        isOpen={isImageViewerOpen}
+        onClose={() => setIsImageViewerOpen(false)}
+        images={project.gallery || [project.imageUrl]}
+      />
     </div>
   );
 }
+
