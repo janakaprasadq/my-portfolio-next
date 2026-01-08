@@ -101,7 +101,7 @@ export const projects: Project[] = [
     description: "Ongoing client project featuring inventory and order management.",
     longDescription: "Developing a comprehensive POS system designed for retail efficiency. Features include inventory tracking, order processing, and customer management modules.",
     techStack: ["Spring Boot", "React.js", "MySQL"],
-    imageUrl: "/images/pos.png",
+    imageUrl: "/images/pos1.png",
     features: ["Inventory Management", "Order Processing", "Customer CRM", "Reporting"],
     gallery: [
       "/images/pos1.png",
