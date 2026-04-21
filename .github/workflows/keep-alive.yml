@@ -1,0 +1,22 @@
+name: Keep Supabase Alive
+
+on:
+  schedule:
+    # Runs at 00:00 every 4 days
+    - cron: '0 0 */4 * *'
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Keep-Alive Endpoint
+        run: |
+          if [ -z "${{ secrets.SITE_URL }}" ]; then
+            echo "Error: SITE_URL secret is not set."
+            exit 1
+          fi
+          
+          curl -X GET "${{ secrets.SITE_URL }}/api/cron/keep-alive" \
+          -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+          -f # Fail on 4xx/5xx errors
